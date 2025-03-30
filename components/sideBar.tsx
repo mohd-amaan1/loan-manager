@@ -56,7 +56,7 @@ export default function Sidebar({ isOpen, toggleSidebar }: SidebarProps) {
             {/* Logout */}
             <li className="flex items-center space-x-2 hover:bg-red-700 p-2 rounded-md mt-8 cursor-pointer">
               <LogOut size={20} />
-              <Link href="/logout">Logout</Link>
+              <Link href="/logout">Signout</Link>
             </li>
           </ul>
         </div>
