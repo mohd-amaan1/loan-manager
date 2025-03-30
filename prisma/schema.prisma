@@ -18,21 +18,6 @@ model User {
   name      String
   email     String   @unique
   password  String
-  createdAt DateTime @default(now())
-}
-
-model Admin {
-  id        Int      @id @default(autoincrement())
-  name      String
-  email     String   @unique
-  password  String
-  createdAt DateTime @default(now())
-}
-
-model Verifier {
-  id        Int      @id @default(autoincrement())
-  name      String
-  email     String   @unique
-  password  String
+  role      String 
   createdAt DateTime @default(now())
 }
