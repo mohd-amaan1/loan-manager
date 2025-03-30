@@ -1,6 +1,6 @@
 'use client';
 
-import { Users, UserCheck, DollarSign, CreditCard, Banknote, PiggyBank, Building, Wallet, UserMinus } from 'lucide-react';
+import { Users, UserCheck, DollarSign, PiggyBank, Building, UserMinus } from 'lucide-react';
 
 export default function DashboardCards() {
   const cards = [

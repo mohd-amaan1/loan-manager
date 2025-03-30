@@ -19,7 +19,6 @@ export default function NavbarA() {
   return (
     <div className="relative w-full">
       <nav className="flex justify-between items-center px-6 py-3 bg-gradient-to-r from-white to-gray-100 shadow-md fixed top-0 left-0 w-full z-50">
-        {/* Left - Logo & Menu Icon */}
         <div className="flex items-center space-x-4">
           <div className="text-green-800 font-bold text-lg">CREDIT APP</div>
           <Menu
@@ -29,7 +28,6 @@ export default function NavbarA() {
           />
         </div>
 
-        {/* Right - Icons */}
         <div className="flex items-center space-x-4 text-green-800">
           <div className="relative cursor-pointer">
             <Bell size={20} />
@@ -38,7 +36,6 @@ export default function NavbarA() {
           
           <MessageCircle size={20} className="cursor-pointer" />
           
-          {/* Admin Dropdown */}
           <div className="relative">
             <div
               className="flex items-center space-x-2 cursor-pointer"
@@ -61,7 +58,6 @@ export default function NavbarA() {
         </div>
       </nav>
 
-      {/* Sidebar */}
       <Sidebar isOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />
     </div>
   );

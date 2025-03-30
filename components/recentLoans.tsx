@@ -44,7 +44,7 @@ export default function AdminLoans() {
       loan.id === id ? { ...loan, status } : loan
     );
     setLoans(updatedLoans);
-    setSelectedLoanId(null); // Close the menu after action
+    setSelectedLoanId(null); 
   };
 
   return (
@@ -64,7 +64,6 @@ export default function AdminLoans() {
         </div>
       </div>
 
-      {/* Table */}
       <div className="overflow-x-auto">
         <table className="w-full table-auto">
           <thead>
@@ -78,7 +77,6 @@ export default function AdminLoans() {
           <tbody>
             {loans.slice((currentPage - 1) * rowsPerPage, currentPage * rowsPerPage).map((loan) => (
               <tr key={loan.id} className="border-b hover:bg-gray-50 transition">
-                {/* User Details */}
                 <td className="flex items-center py-4 px-4 space-x-4">
                   <Image src={loan.avatar} alt={loan.title} width={40} height={40} className="rounded-full" />
                   <div>
@@ -87,19 +85,16 @@ export default function AdminLoans() {
                   </div>
                 </td>
 
-                {/* Customer Name */}
                 <td className="py-4 px-4">
                   <p className="font-medium">{loan.customer}</p>
                   <span className="text-sm text-gray-500">on {loan.customerDate}</span>
                 </td>
 
-                {/* Date */}
                 <td className="py-4 px-4">
                   <p className="font-medium">{loan.date}</p>
                   <span className="text-sm text-gray-500">{loan.time}</span>
                 </td>
 
-                {/* Status Action */}
                 <td className="py-4 px-4 relative">
                   <div className="flex items-center space-x-2">
                     <span className={`px-3 py-1 rounded-full text-xs font-bold ${
@@ -119,7 +114,6 @@ export default function AdminLoans() {
                     />
                   </div>
 
-                  {/* Dropdown Action Menu */}
                   {selectedLoanId === loan.id && loan.status === "PENDING" && (
                     <div className="absolute right-0 mt-2 w-32 bg-white shadow-lg rounded-lg border z-10">
                       <button

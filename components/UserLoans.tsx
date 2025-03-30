@@ -5,7 +5,7 @@ import { MoreVertical, Filter, ArrowLeft, ArrowRight, ChevronUp } from 'lucide-r
 const loans = [
   {
     officer: 'John Okoh',
-    image: '/avatars/user-avatar.jpg', // Replace with real image path
+    image: '/avatars/user-avatar.jpg', 
     amount: '50,000.00',
     date: 'June 09, 2021',
     time: '6:30 PM',
@@ -44,7 +44,6 @@ const loans = [
 export default function AppliedLoans() {
   return (
     <div className="bg-white min-h-screen p-8 rounded-lg shadow-md max-w-5xl mx-auto">
-      {/* Header */}
       <div className="flex justify-between items-center mb-6">
         <h2 className="text-2xl font-bold text-gray-800">Applied Loans</h2>
         <div className="flex space-x-4">
@@ -59,7 +58,6 @@ export default function AppliedLoans() {
         </div>
       </div>
 
-      {/* Table */}
       <div className="rounded-lg overflow-hidden">
         <table className="w-full text-left bg-white">
           <thead className="bg-gray-50 text-gray-600">
@@ -109,7 +107,6 @@ export default function AppliedLoans() {
         </table>
       </div>
 
-      {/* Pagination */}
       <div className="flex justify-between items-center mt-6 text-gray-600">
         <div className="text-sm">Rows per page: <span className="font-semibold">7</span></div>
         <div className="flex items-center space-x-2">

@@ -4,7 +4,6 @@ import { useState } from 'react';
 import { Search, DollarSign, X } from 'lucide-react';
 import dynamic from 'next/dynamic';
 
-// Lazy-load the chart to prevent client-side rendering issues
 const Chart = dynamic(() => import('react-apexcharts'), { ssr: false });
 
 export default function LoanOverview() {
@@ -39,7 +38,6 @@ export default function LoanOverview() {
 
   return (
     <div className="bg-gray-100 p-8 max-w-4xl mx-auto">
-      {/* Top Section */}
       <div className="flex items-center justify-between">
         <div className="flex items-center space-x-4">
           <div className="bg-green-500 p-4 rounded-lg">
@@ -59,7 +57,6 @@ export default function LoanOverview() {
         </button>
       </div>
 
-      {/* Tabs */}
       <div className="flex mt-6 border-b">
         {['Borrow Cash', 'Transact', 'Deposit Cash'].map((tab) => (
           <button
@@ -76,7 +73,6 @@ export default function LoanOverview() {
         ))}
       </div>
 
-      {/* Search Bar */}
       <div className="relative mt-6 bg-white shadow-md rounded-lg overflow-hidden">
         <Search size={20} className="absolute left-4 top-3 text-gray-500" />
         <input
@@ -86,7 +82,6 @@ export default function LoanOverview() {
         />
       </div>
 
-      {/* Popup */}
       {isPopupOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
           <div className="bg-white w-full max-w-2xl rounded-lg shadow-lg overflow-y-auto max-h-[90vh] p-8 relative">
